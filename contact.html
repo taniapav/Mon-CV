@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    <head>
+	    <title>Mon CV en ligne</title>
+	    <meta charset="utf-8"/>
+		<meta name="viewport" content="width-device-width", initial-scale=1.0> 
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+	    <header>
+		    <h1>Tatjana PAVLOVIC</h1>
+		</header>
+		<nav>
+		    <div class="table">
+		        <ul>
+			       <li class="menu-ind">
+				       <a href="index.html">Accueil</a>
+				    </li>
+				    <li class="menu-exp">
+				        <a href="expériences-pro.html">Experiences professionelles</a>
+				    </li>
+				    <li class="menu-hob">
+				        <a href="hobbies.html">Loisirs</a>
+				    </li>
+				    <li class="menu-con">
+				        <a href="contact.html">Contactez moi</a>
+				    </li>
+			    </ul>
+			</div>	
+		</nav>
+		<section class="contact">
+		
+		    <h1>Contactez moi !</h1>
+			<form method="post" section="traitement.php">
+			    <div class="sec">
+				    <h3><strong>Besoin plus de renseignement, remplissez le formulaire de contact:</h3>
+			        <label for="nom"><strong>Entrez votre nom</strong></label><br>
+					<input type="text" name="nom" id="nom" autofocus="autofocus" autocomlete="on" required placeholder="ex: Nicolas" maxlength='20'><br><br>
+					<label for="mail"><strong>Entrez votre mail</strong></label><br>
+					<input type="email" name="mail" id="mail" required="required"><br><br>
+					<label for="prez"><strong>Objet</strong></label><br>
+					<textarea type="prez" name="prez" id="prez"></textarea><br><br>
+					
+			        <input type="submit" value="Envoyer" id="bouton_envoi">
+			    </div>
+			</form>
+			<script>
+			    var validation = document.getElementById('bouton_envoi');
+				var nom_v = /^[a-zA-ZéèîïËÊÎÏ][a-zéèêâäçîï]+([-'\s][a-zA-ZéèîïËÊÏÎ][a-zéèêâäçîï]+)?/;
+				validation.addEventListener('click', f_valid);
+				
+				function f_valid(e){
+				    if (nom.validity.valueMissing){
+					    e.preventDefault();
+					}else if (nom_v.test(nom.value) == false){
+					    event.preventDefault();
+						nom.textContent = 'Format incorect';
+						}else{}	
+				}
+			</script>
+		</section>	  
+		<footer>
+		    <p>Copyright 2018 Tatjana PAVLOVIC - Toute reproduction interdite</p>
+		</footer>
+	
+	</body>
+</html>
