@@ -3,7 +3,7 @@
     <head>
 	    <title>Mon CV en ligne</title>
 	    <meta charset="utf-8"/>
-		<meta name="viewport" content="width-device-width", initial-scale=1.0> 
+		<meta name="viewport" content="width-device-width", initial-scale=1.0>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
@@ -26,10 +26,10 @@
 				        <a href="contact.html">Contactez moi</a>
 				    </li>
 			    </ul>
-			</div>	
+			</div>
 		</nav>
 		<section class="contact">
-		
+
 		    <h1>Contactez moi !</h1>
 			<form method="post" section="traitement.php">
 			    <div class="sec">
@@ -40,28 +40,14 @@
 					<input type="email" name="mail" id="mail" required="required"><br><br>
 					<label for="prez"><strong>Objet</strong></label><br>
 					<textarea type="prez" name="prez" id="prez"></textarea><br><br>
-					
+
 			        <input type="submit" value="Envoyer" id="bouton_envoi">
 			    </div>
 			</form>
-			<script>
-			    var validation = document.getElementById('bouton_envoi');
-				var nom_v = /^[a-zA-ZéèîïËÊÎÏ][a-zéèêâäçîï]+([-'\s][a-zA-ZéèîïËÊÏÎ][a-zéèêâäçîï]+)?/;
-				validation.addEventListener('click', f_valid);
-				
-				function f_valid(e){
-				    if (nom.validity.valueMissing){
-					    e.preventDefault();
-					}else if (nom_v.test(nom.value) == false){
-					    event.preventDefault();
-						nom.textContent = 'Format incorect';
-						}else{}	
-				}
-			</script>
-		</section>	  
+		</section>
 		<footer>
 		    <p>Copyright 2018 Tatjana PAVLOVIC - Toute reproduction interdite</p>
 		</footer>
-	
+
 	</body>
 </html>
